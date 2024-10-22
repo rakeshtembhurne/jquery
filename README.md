@@ -118,7 +118,7 @@ Some example modules that can be excluded or included are:
 
 - **selector**: The full jQuery selector engine. When this module is excluded, it is replaced with a rudimentary selector engine based on the browser's `querySelectorAll` method that does not support jQuery selector extensions or enhanced semantics. See the [selector-native.js](https://github.com/jquery/jquery/blob/main/src/selector-native.js) file for details.
 
-*Note*: Excluding the full `selector` module will also exclude all jQuery selector extensions (such as `effects/animatedSelector` and `css/hiddenVisibleSelectors`).
+_Note_: Excluding the full `selector` module will also exclude all jQuery selector extensions (such as `effects/animatedSelector` and `css/hiddenVisibleSelectors`).
 
 ##### AMD name
 
@@ -200,7 +200,7 @@ Or, to create the slim build as an esm module:
 npm run build -- --filename=jquery.slim.module.js --slim --esm
 ```
 
-*Non-official custom builds are not regularly tested. Use them at your own risk.*
+_Non-official custom builds are not regularly tested. Use them at your own risk._
 
 ## Running the Unit Tests
 
@@ -267,24 +267,24 @@ The following are some commands that can be used there:
 ### Test methods
 
 ```js
-expect( numAssertions );
+expect(numAssertions);
 stop();
 start();
 ```
 
-*Note*: QUnit's eventual addition of an argument to stop/start is ignored in this test suite so that start and stop can be passed as callbacks without worrying about their parameters.
+_Note_: QUnit's eventual addition of an argument to stop/start is ignored in this test suite so that start and stop can be passed as callbacks without worrying about their parameters.
 
 ### Test assertions
 
 ```js
-ok( value, [message] );
-equal( actual, expected, [message] );
-notEqual( actual, expected, [message] );
-deepEqual( actual, expected, [message] );
-notDeepEqual( actual, expected, [message] );
-strictEqual( actual, expected, [message] );
-notStrictEqual( actual, expected, [message] );
-throws( block, [expected], [message] );
+ok(value, [message]);
+equal(actual, expected, [message]);
+notEqual(actual, expected, [message]);
+deepEqual(actual, expected, [message]);
+notDeepEqual(actual, expected, [message]);
+strictEqual(actual, expected, [message]);
+notStrictEqual(actual, expected, [message]);
+throws(block, [expected], [message]);
 ```
 
 ## Test Suite Convenience Methods Reference
@@ -308,7 +308,7 @@ q( "main", "foo", "bar" );
 ### Asserts that a selection matches the given IDs
 
 ```js
-t( testName, selector, [ "array", "of", "ids" ] );
+t(testName, selector, ["array", "of", "ids"]);
 ```
 
 Example:
@@ -320,19 +320,19 @@ t("Check for something", "//[a]", ["foo", "bar"]);
 ### Fires a native DOM event without going through jQuery
 
 ```js
-fireNative( node, eventType );
+fireNative(node, eventType);
 ```
 
 Example:
 
 ```js
-fireNative( jQuery( "#elem" )[ 0 ], "click" );
+fireNative(jQuery("#elem")[0], "click");
 ```
 
 ### Add random number to url to stop caching
 
 ```js
-url( "some/url" );
+url("some/url");
 ```
 
 Example:
@@ -359,8 +359,8 @@ and setup code should be placed in the iframe file.
 testIframe( testName, fileName,
   function testCallback(
       assert, jQuery, window, document,
-	  [ additional args ] ) {
-	...
+   [ additional args ] ) {
+ ...
   } );
 ```
 
@@ -379,3 +379,7 @@ they follow the `document` argument.
 
 If you have any questions, please feel free to ask on the
 [Developing jQuery Core forum](https://forum.jquery.com/developing-jquery-core) or in #jquery on [libera](https://web.libera.chat/).
+
+### Custom Edit
+
+Edited by Bot Team
